@@ -1,6 +1,6 @@
 import * as game from "natives";
 
-export default class Camera {
+class Camera {
 	constructor(name, position, rotation, fov) {
 		this.camera = game.createCam(name, 1);
 		game.setCamCoord(this.camera, position.x, position.y, position.z);
@@ -207,5 +207,8 @@ export default class Camera {
 	get cam () {
 		return this.camera;
 	}
-
 }
+
+export {
+	Camera
+};
